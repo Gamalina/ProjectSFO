@@ -1,0 +1,203 @@
+﻿@page
+@model IndexModel
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card d-flex flex-column h-100">
+                <div class="card-body text-center">
+                    <h1>BEC</h1>
+                    @if (Model.SolutionData != null && Model.SolutionData.BECSolutions != null)
+                    {
+                        
+                        int totalSolutions = Model.SolutionData.BECSolutions.Length;
+                        int totalBatch = totalSolutions / 2;
+                        int batchSize = totalBatch; // Number of solutions per batch
+                        for (int i = 0; i < totalSolutions; i += batchSize)
+                        {
+                            <div class="row">
+                                @for (int j = i; j < i + batchSize && j < totalSolutions; j++)
+                                {
+                                    <div class="col-md-6">
+                                        <span class="float-left">
+                                            @Model.SolutionData.BECSolutions[j]
+                                        </span>
+
+                                        <span class="float-right">
+                                            <a href="#">Operations</a>
+                                            <a href="#">Plans</a>
+                                        </span>
+                                    </div>
+                                }
+                            </div>
+                        }
+                        
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card d-flex flex-column h-100">
+                <div class="card-body text-center">
+                    <h1>Bankdata</h1>
+                    @if (Model.SolutionData != null && Model.SolutionData.BankDataSolutions != null)
+                    {
+                        int totalSolutions = Model.SolutionData.BankDataSolutions.Length;
+                        int totalBatch = totalSolutions / 2;
+                        int batchSize = totalBatch; // Number of solutions per batch
+
+                        for (int i = 0; i < totalSolutions; i += batchSize)
+                        {
+                            <div class="row">
+                                @for (int j = i; j < i + batchSize && j < totalSolutions; j++)
+                                {
+                                    <div class="col-md-6">
+                                        <span class="float-left">
+                                            @Model.SolutionData.BankDataSolutions[j]
+                                        </span>
+
+                                        <span class="float-right">
+                                            <a href="#">Operations</a>
+                                            <a href="#">Plans</a>
+                                        </span>
+                                    </div>
+                                }
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+            </div>
+        <div class="col-md-4 mb-4">
+            <div class="card d-flex flex-column h-100">
+            <div class="card-body text-center">
+                <h1>SDC</h1>
+                @if (Model.SolutionData != null && Model.SolutionData.SDCSolutions != null)
+                {
+                        int totalSolutions = Model.SolutionData.SDCSolutions.Length;
+                        int totalBatch = totalSolutions / 2;
+                        int batchSize = totalBatch; // Number of solutions per batch
+
+                        for (int i = 0; i < totalSolutions; i += batchSize)
+                        {
+                            <div class="row">
+                                @for (int j = i; j < i + batchSize && j < totalSolutions; j++)
+                                {
+                                    <div class="col-md-6">
+                                        <span class="float-left">
+                                            @Model.SolutionData.SDCSolutions[j]
+                                        </span>
+
+                                        <span class="float-right">
+                                            <a href="#">Operations</a>
+                                            <a href="#">Plans</a>
+                                        </span>
+                                    </div>
+                                }
+                            </div>
+                        }
+                }
+            </div>
+        </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card d-flex flex-column h-100">
+                <div class="card-body text-center">
+                    <h1>Nykredit</h1>
+                    @if (Model.SolutionData != null && Model.SolutionData.NykreditSolutions != null)
+                    {
+                        int totalSolutions = Model.SolutionData.NykreditSolutions.Length;
+                        int totalBatch = totalSolutions / 2;
+                        int batchSize = totalBatch; // Number of solutions per batch
+
+                        for (int i = 0; i < totalSolutions; i += batchSize)
+                        {
+                            <div class="row">
+                                @for (int j = i; j < i + batchSize && j < totalSolutions; j++)
+                                {
+                                    <div class="col-md-6">
+                                        <span class="float-left">
+                                            @Model.SolutionData.NykreditSolutions[j]
+                                        </span>
+
+                                        <span class="float-right">
+                                            <a href="#">Operations</a>
+                                            <a href="#">Plans</a>
+                                        </span>
+                                    </div>
+                                }
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+            </div>
+        <div class="col-md-4 mb-4">
+            <div class="card d-flex flex-column h-100">
+            <div class="card-body text-center">
+                <h1>Jyskebank</h1>
+                @if (Model.SolutionData != null && Model.SolutionData.JyskebankSolutions != null)
+                    {
+                        int totalSolutions = Model.SolutionData.JyskebankSolutions.Length;
+                        int totalBatch = totalSolutions / 2;
+                        int batchSize = totalBatch; // Number of solutions per batch
+
+                        for (int i = 0; i < totalSolutions; i += batchSize)
+                        {
+                            <div class="row">
+                                @for (int j = i; j < i + batchSize && j < totalSolutions; j++)
+                                {
+                                    <div class="col-md-6">
+                                        <span class="float-left">
+                                            @Model.SolutionData.JyskebankSolutions[j]
+                                        </span>
+
+                                        <span class="float-right">
+                                            <a href="#">Operations</a>
+                                            <a href="#">Plans</a>
+                                        </span>
+                                    </div>
+                                }
+                            </div>
+                        }
+                    }
+                </div>
+        </div>
+            </div>
+        <div class="col-md-4 mb-4">
+            <div class="card d-flex flex-column h-100">
+        <div class="card-body text-center">
+            <h1>Silkeborg Data</h1>
+            @if (Model.SolutionData != null && Model.SolutionData.SilkeborgSolutions != null)
+            {
+                        int totalSolutions = Model.SolutionData.SilkeborgSolutions.Length;
+                        int totalBatch = totalSolutions / 2;
+                        int batchSize = totalBatch; // Number of solutions per batch
+
+                        for (int i = 0; i < totalSolutions; i += batchSize)
+                        {
+                            <div class="row">
+                                @for (int j = i; j < i + batchSize && j < totalSolutions; j++)
+                                {
+                                    <div class="col-md-6">
+                                        <span class="float-left">
+                                            @Model.SolutionData.SilkeborgSolutions[j]
+                                        </span>
+
+                                        <span class="float-right">
+                                            <a href="#">Operations</a>
+                                            <a href="#">Plans</a>
+                                        </span>
+                                    </div>
+                                }
+                            </div>
+                        }
+            }
+        </div>
+            </div>
+        </div>
+</div>
+</div>

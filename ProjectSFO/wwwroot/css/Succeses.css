@@ -1,0 +1,14 @@
+﻿.filter-container {
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 0;
+}
+.checkboxespadding {
+    padding-left: 25px;
+}
+
+.sidebar {
+    height: calc(67vh - 56px); /* Adjust as needed */
+    overflow-y: auto;
+}
+
